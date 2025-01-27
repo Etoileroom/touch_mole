@@ -44,7 +44,7 @@ let sjudge=false;
 let rjudge=false;
 let djudge=false;
 function setup(){
-	createCanvas(2000,1000);
+	createCanvas(1080,820);
 	frameRate(60);
     normal=new Mato(random(cric),random(cri));
     normal.color="#b8883b";
