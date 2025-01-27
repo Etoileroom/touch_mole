@@ -145,7 +145,7 @@ if(change==true&&home==false&&a==true){
         if(change==true&&home==true){
         background(100,180,20);
 
-textSize(100)
+        textSize(100)
         text("sss"+windowWidth+windowHeight,10,100)
 		
         fill("#bff25d");
