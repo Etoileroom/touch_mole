@@ -146,7 +146,7 @@ if(change==true&&home==false&&a==true){
         background(100,180,20);
 
         textSize(100)
-        text("sss",10,100)
+        text("sss"+windowWidth+windowHeight,10,100)
 		
         fill("#bff25d");
         rect(1390,130,475,520,20);
