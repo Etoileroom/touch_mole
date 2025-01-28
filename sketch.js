@@ -1,10 +1,10 @@
 
 let hei;
 let wid;
-let cri=[1000/6,1000/2,5000/6];
-let cric=[2000/6,2000/2,2000*5/6];
-let cr=[2000/3,4000/3];
-let c=[2000/6,2000/3,2000/2,4000/3,10000/6];
+let cri=[771/6,771/2,3855/6];
+let cric=[1080/6,1080/2,1080*5/6];
+let cr=[1080/3,2160/3];
+let c=[1080/6,1080/3,1080/2,2160/3,5400/6];
 let count=0;
 let count2=0;
 let point=[0,0];
@@ -44,8 +44,9 @@ let sjudge=false;
 let rjudge=false;
 let djudge=false;
 function setup(){
-	createCanvas(windowWidth,windowHeight);
-	frameRate(60);
+	//createCanvas(windowWidth,windowHeight);
+	createCanvas(1080,771);
+    frameRate(60);
     normal=new Mato(random(cric),random(cri));
     normal.color="#b8883b";
     normal.eyecolor="#000000";
@@ -91,8 +92,8 @@ if(change==true&&home==true&&1390<=touch.x&&1805>=touch.x&&700<=touch.y&&820>=to
     normal2.move();
     special.x=random(cr);
     special.y=random(cri);
-    rainbow.x=20000;
-    rainbow.y=20000;
+    rainbow.x=30000;
+    rainbow.y=30000;
     damage.x=random(cr);
     damage.y=random(cri);
     FCC=0;
@@ -137,6 +138,7 @@ if(change==true&&home==false&&a==true){
     }
     }}
     function draw(){
+        
         if(FCA%3<=0){
             rainbow.color=random(color);
             rainbow.eyecolor=random(color);
@@ -144,27 +146,24 @@ if(change==true&&home==false&&a==true){
         FCA+=1;
         if(change==true&&home==true){
         background(100,180,20);
-
-        textSize(100)
-        text("sss"+windowWidth+windowHeight,10,100)
-		
         fill("#bff25d");
         rect(1390,130,475,520,20);
         fill(255);
         rect(1390,700,415,120,20);
-        textSize(50);
-        text("↖(最後10秒に出現)",650,580);
+        textFont("DotGothic16",[30]);
+        //textSize(50);
+        text("↖(最後10秒に出現)",200,580);
         text("直近のハイスコア",1435,200);
-        textSize(80);
-        text("・制限時間は60秒",60,900);
-        text("・命中率が高いとボーナス",60,800);
+        textSize(50);
+        text("・制限時間は60秒",450,250);
+        text("・命中率が高いとボーナス",450,200);
         textSize(150);
         text("もぐらたたき",0,120);
         textSize(100);
-        text("・　 をたたくと1点",50,225);
-        text("・　 をたたくと2点",50,375);
-        text("・　 をたたくと5点",50,525);
-        text("・　 をたたくと-3点",50,675);
+        text("・　 =1点",0,225);
+        text("・　 =2点",0,375);
+        text("・　 =5点",0,525);
+        text("・　 =-3点",0,675);
         fill(0);
         text("スタート",1400,800);
         textSize(75);
@@ -174,20 +173,20 @@ if(change==true&&home==false&&a==true){
         if(top2<=0){text("No2.ー",1435,440);}else{text("No2."+top2+"点",1435,440)}
         fill("#9a6229");
         if(top3<=0){ text("No3.ー",1435,560);}else{text("No3."+top3+"点",1435,560);}
-        normal.x=200;
+        normal.x=150;
         normal.y=200;
         normal.display();
-        special.x=200;
+        special.x=150;
         special.y=350;
         special.display();
-        rainbow.x=200;
+        rainbow.x=150;
         rainbow.y=500;
         rainbow.display(); 
-        damage.x=200;
+        damage.x=150;
         damage.y=650;
         damage.display();  
         fill(0,128);
-        circle(200,500,150);
+        circle(150,500,150);
     }
     
         if(change==true&&home==false){
@@ -201,11 +200,11 @@ if(change==true&&home==false&&a==true){
         background(100,180,20);
     noStroke();
     fill(227,171,128);
-    for(hei=1000/6;hei<=1000;hei+=1000/3){
-    for(wid=2000/6;wid<=2000;wid+=2000/3){
+    for(hei=771/6;hei<=771;hei+=771/3){
+    for(wid=1080/6;wid<=1080;wid+=1080/3){
         circle(wid,hei,200);}}
-    for(hei=1000/6;hei<=1000;hei+=1000/3){
-    for(wid=2000/3;wid<=4000/3;wid+=2000/3){
+    for(hei=771/6;hei<=771;hei+=771/3){
+    for(wid=1080/3;wid<=2160/3;wid+=1080/3){
         fill("#e19f47");
                 circle(wid,hei,200);}}
   if(FCA%60<=0){
@@ -376,8 +375,10 @@ if(sjudge==true){
         normal2.move();
         special.x=random(cr);
         special.y=random(cri);
-        rainbow.x=20000;
-        rainbow.y=20000;
+        rainbow.x=1080
+0;
+        rainbow.y=1080
+0;
         damage.x=random(cr);
         damage.y=random(cri);
         change=true;
