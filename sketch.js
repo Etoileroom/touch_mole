@@ -82,7 +82,7 @@ if(change==false&&750<=touch.x&&1150>=touch.x&&550<=touch.y&&670>=touch.y){
     spoint=[0,0,0,0];
     
 }
-if(change==true&&home==true&&1390<=touch.x&&1805>=touch.x&&700<=touch.y&&820>=touch.y){
+if(change==true&&home==true&&540<=touch.x&&955>=touch.x&&600<=touch.y&&720>=touch.y){
     hanmer=false
     N+=1;
     point[N]=0;
@@ -149,7 +149,7 @@ if(change==true&&home==false&&a==true){
         fill("#bff25d");
         rect(1390,130,475,520,20);
         fill(255);
-        rect(1390,700,415,120,20);
+        rect(540,600,415,120,20);
         textFont("DotGothic16",[30]);
         //textSize(50);
         text("↖(最後10秒に出現)",200,580);
@@ -165,7 +165,7 @@ if(change==true&&home==false&&a==true){
         text("・　 =5点",0,525);
         text("・　 =-3点",0,675);
         fill(0);
-        text("スタート",1400,800);
+        text("スタート",550,700);
         textSize(75);
         fill("#e6b422");
         if(top1<=0){text("No1.ー",1435,320);}else{text("No1."+top1+"点",1435,320);}
