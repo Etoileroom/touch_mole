@@ -69,11 +69,11 @@ function setup(){
 function touchStarted(){
   for(let touch of touches){
     hanmer=true
-    if(change==false&&750<=touch.x&&1150>=touch.x&&700<=touch.y&&820>=touch.y){
+    if(change==false&&750<=touch.x&&1070>=touch.x&&675<=touch.y&&755>=touch.y){
     retry=true;
     FCC=0
 }
-if(change==false&&750<=touch.x&&1150>=touch.x&&550<=touch.y&&670>=touch.y){
+if(change==false&&750<=touch.x&&1070>=touch.x&&580<=touch.y&&660>=touch.y){
     N+=1;
     point[N]=0;
     time=60;
@@ -138,7 +138,6 @@ if(change==true&&home==false&&a==true){
     }
     }}
     function draw(){
-        
         if(FCA%3<=0){
             rainbow.color=random(color);
             rainbow.eyecolor=random(color);
@@ -319,16 +318,16 @@ if(sjudge==true){
     }
   if(change==false){
     background(100,180,20);
-    textSize(100);
+    textSize(50);
     fill(255);
     text("✕"+spoint[0]+"="+spoint[0]+"点",150,100);
     text("✕"+spoint[1]+"="+spoint[1]*2+"点",150,250);
     text("✕"+spoint[2]+"="+spoint[2]*5+"点",150,400);
     text("✕"+spoint[3]*-1+"="+spoint[3]*3+"点",150,550);
-    text("計"+(spoint[0]+spoint[1]*2+spoint[2]*5+spoint[3]*3)+"点",100,680);
-    textSize(65);
-    text("命中率:"+percent+"%",75,780);
-    text("命中率ボーナス:"+pb+"点",0,880);
+    text("計"+(spoint[0]+spoint[1]*2+spoint[2]*5+spoint[3]*3)+"点",120,630);
+    textSize(40);
+    text("命中率:"+percent+"%",75,700);
+    text("命中率ボーナス:"+pb+"点",0,750);
     normal.x=75;
     normal.y=75;
     normal.display();
@@ -346,11 +345,11 @@ if(sjudge==true){
     fill("#bff25d");
     rect(1390,130,475,520,20);
     fill(255);
-    textSize(200);
-    text("Score",width/2-300,height/2-220);
-    text(point[N]+"点",width/2-250,height/2-20);
-    rect(750,700,400,120,20);
-    rect(750,550,400,120,20);
+    textSize(100);
+    text("Score",width/2-50,height/2-300);
+    text(point[N]+"点",width/2+50,height/2-200);
+    rect(750,675,320,80,20);
+    rect(750,580,320,80,20);
     textSize(50);
     text("直近のハイスコア",1435,200);
     textSize(75);
@@ -361,8 +360,8 @@ if(sjudge==true){
         fill("#9a6229");
         if(top3<=0){ text("No3.ー",1435,560);}else{text("No3."+top3+"点",1435,560);}
         fill(0);
-    textSize(100);
-    text("リトライ",750,800);
+    textSize(80);
+    text("リトライ",750,750);
     text("ホーム",800,650);
     if(retry==true){
         ccount=0
