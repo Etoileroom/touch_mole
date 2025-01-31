@@ -39,10 +39,10 @@ let percent;
 let hanmer=false;
 let pb;
 let a=false;
-let njudge=false;
-let sjudge=false;
-let rjudge=false;
-let djudge=false;
+var njudge=false;
+var sjudge=false;
+var rjudge=false;
+var djudge=false;
 function setup(){
 	//createCanvas(windowWidth,windowHeight);
 	createCanvas(1080,771);
@@ -382,10 +382,8 @@ if(sjudge==true){
         normal2.move();
         special.x=random(cr);
         special.y=random(cri);
-        rainbow.x=1080
-0;
-        rainbow.y=1080
-0;
+        rainbow.x=10800;
+        rainbow.y=10800;
         damage.x=random(cr);
         damage.y=random(cri);
         change=true;
