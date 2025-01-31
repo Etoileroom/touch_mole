@@ -20,10 +20,10 @@ let FCA=0;
 let FCB=0;
 let FCC=0;
 let FCD=0;
-let FCE=0;
-let FCF=0;
-let FCG=0;
-let FCH=0;
+let FCE=[0,0,0];
+let FCF=[0,0,0];
+let FCG=[0,0,0];
+let FCH=[0,0,0];
 let change;
 let retry;
 let home;
@@ -114,6 +114,8 @@ if(change==true&&home==false&&a==true){
         normal2.move();
         spoint[0]+=1
         njudge=true;
+	FCE[1]=touch.x+50
+	FCE[2]=touch.y-50
     }
     if(a==true&&((abs(special.x-touch.x+50)<95&&abs(special.y-touch.y-45)<110)||(abs(special.x-touch.x)<75&&abs(special.y-touch.y)<75))){
         point[N]+=2
@@ -121,6 +123,8 @@ if(change==true&&home==false&&a==true){
         special.y=random(cri);
         spoint[1]+=1
         sjudge=true;
+	FCF[1]=touch.x+50
+	FCF[2]=touch.y-50
     }
     if(a==true&&((abs(rainbow.x-touch.x+50)<95&&abs(rainbow.y-touch.y-45)<110)||(abs(rainbow.x-touch.x)<75&&abs(rainbow.y-touch.y)<75))){
         point[N]+=5
@@ -128,6 +132,8 @@ if(change==true&&home==false&&a==true){
         rainbow.y=random(cri);
         spoint[2]+=1
         rjudge=true;
+	FCG[1]=touch.x+50
+	FCG[2]=touch.y-50
     }
     if(a==true&&((abs(damage.x-touch.x+50)<95&&abs(damage.y-touch.y-45)<110)||(abs(damage.x-touch.x)<75&&abs(damage.y-touch.y)<75))){
         point[N]-=3
@@ -135,6 +141,8 @@ if(change==true&&home==false&&a==true){
         damage.y=random(cri);
         spoint[3]-=1
         djudge=true;
+	FCH[1]=touch.x+50
+	FCH[2]=touch.y-50
     }
     }}
     function draw(){
@@ -253,33 +261,33 @@ if(change==true&&home==false&&a==true){
   }
   fill("#FFFFCF");
 if(njudge==true){
-    FCE+=1;
-    text("+1",touch.x+50,touch.y-50);
-    if(FCE%30<=0){
+    FCE[0]+=1;
+    text("+1",FCE[1],FCE[2]);
+    if(FCE[0]%30<=0){
         njudge=false;
-        FCE=0;
+        FCE[0]=0;
     }}
 if(sjudge==true){
-        FCF+=1;
-        text("+2",touch.x+50,touch.y-50);
-        if(FCF%30<=0){
+        FCF[0]+=1;
+        text("+2",FCF[1],FCF[2]);
+        if(FCF[0]%30<=0){
             sjudge=false;
-            FCF=0;
+            FCF[0]=0;
         }}
  if(rjudge==true){
-        FCG+=1;
-        text("+5",touch.x+50,touch.y-50);
-        if(FCG%30<=0){
+        FCG[0]+=1;
+        text("+5",FCG[1],FCG[2]);
+        if(FCG[0]%30<=0){
            rjudge=false;
-           FCG=0;
+           FCG[0]=0;
             }}
             if(djudge==true){
-                FCH+=1;
+                FCH[0]+=1;
                 fill("#CF0000")
-                text("-3",touch.x+50,touch.y-50);
-                if(FCH%30<=0){
+                text("-3",FCH[1],FCH[2]);
+                if(FCH[0]%30<=0){
                     djudge=false;
-                    FCH=0;
+                    FCH[0]=0;
                 }}}
 }
 
