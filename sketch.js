@@ -261,23 +261,23 @@ if(change==true&&home==false&&a==true){
   }
   fill("#FFFFCF");
 if(njudge==true){
-    FCE[0]+=1;
+    //FCE[0]+=1;
     text("+1",FCE[1],FCE[2]);
-    if(FCE[0]%30<=0){
+    if(FCE[0]%5<=0){
         njudge=false;
         FCE[0]=0;
     }}
 if(sjudge==true){
         FCF[0]+=1;
         text("+2",FCF[1],FCF[2]);
-        if(FCF[0]%30<=0){
+        if(FCF[0]%5<=0){
             sjudge=false;
             FCF[0]=0;
         }}
  if(rjudge==true){
         FCG[0]+=1;
         text("+5",FCG[1],FCG[2]);
-        if(FCG[0]%30<=0){
+        if(FCG[0]%5<=0){
            rjudge=false;
            FCG[0]=0;
             }}
@@ -285,7 +285,7 @@ if(sjudge==true){
                 FCH[0]+=1;
                 fill("#CF0000")
                 text("-3",FCH[1],FCH[2]);
-                if(FCH[0]%30<=0){
+                if(FCH[0]%5<=0){
                     djudge=false;
                     FCH[0]=0;
                 }}}
