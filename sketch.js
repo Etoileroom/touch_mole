@@ -122,9 +122,9 @@ if(change==true&&home==false&&a==true){
         special.x=random(cr);
         special.y=random(cri);
         spoint[1]+=1
-        for(let a=0;a<30;a++){
-	text("+3000000000000000000",touch.x,touch.y)
-	}
+        sjudge=true;
+	FCF[1]=touch.x+50
+	FCF[2]=touch.y-50
     }
     if(a==true&&((abs(rainbow.x-touch.x+50)<95&&abs(rainbow.y-touch.y-45)<110)||(abs(rainbow.x-touch.x)<75&&abs(rainbow.y-touch.y)<75))){
         point[N]+=5
@@ -154,13 +154,13 @@ if(change==true&&home==false&&a==true){
         if(change==true&&home==true){
         background(100,180,20);
         fill("#bff25d");
-        rect(1390,130,475,520,20);
+        rect(500,255,475,320,20);
         fill(255);
         rect(540,600,415,120,20);
         textFont("DotGothic16",[30]);
         //textSize(50);
         text("↖(最後10秒に出現)",200,580);
-        text("直近のハイスコア",1435,200);
+        text("直近のハイスコア",500,300);
         textSize(50);
         text("・制限時間は60秒",450,250);
         text("・命中率が高いとボーナス",450,200);
@@ -173,13 +173,13 @@ if(change==true&&home==false&&a==true){
         text("・　 =-3点",0,675);
         fill(0);
         text("スタート",550,700);
-        textSize(75);
+        textSize(50);
         fill("#e6b422");
-        if(top1<=0){text("No1.ー",1435,320);}else{text("No1."+top1+"点",1435,320);}
+        if(top1<=0){text("No1.ー",510,360);}else{text("No1."+top1+"点",510,360);}
         fill("#bec1c3");
-        if(top2<=0){text("No2.ー",1435,440);}else{text("No2."+top2+"点",1435,440)}
+        if(top2<=0){text("No2.ー",510,440);}else{text("No2."+top2+"点",510,440)}
         fill("#9a6229");
-        if(top3<=0){ text("No3.ー",1435,560);}else{text("No3."+top3+"点",1435,560);}
+        if(top3<=0){ text("No3.ー",510,520);}else{text("No3."+top3+"点",510,520);}
         normal.x=150;
         normal.y=200;
         normal.display();
@@ -351,7 +351,7 @@ if(sjudge==true){
     fill(0,128);
         circle(75,375,150);
     fill("#bff25d");
-    rect(1390,130,475,520,20);
+    rect(500,255,475,320,20);
     fill(255);
     textSize(100);
     text("Score",width/2-50,height/2-300);
@@ -360,13 +360,13 @@ if(sjudge==true){
     rect(750,580,320,80,20);
     textSize(50);
     text("直近のハイスコア",1435,200);
-    textSize(75);
+    textSize(50);
         fill("#e6b422");
-        if(top1<=0){text("No1.ー",1435,320);}else{text("No1."+top1+"点",1435,320);}
+        if(top1<=0){text("No1.ー",510,360);}else{text("No1."+top1+"点",510,360);}
         fill("#bec1c3");
-        if(top2<=0){text("No2.ー",1435,440);}else{text("No2."+top2+"点",1435,440)}
+        if(top2<=0){text("No2.ー",510,440);}else{text("No2."+top2+"点",510,440)}
         fill("#9a6229");
-        if(top3<=0){ text("No3.ー",1435,560);}else{text("No3."+top3+"点",1435,560);}
+        if(top3<=0){ text("No3.ー",510,520);}else{text("No3."+top3+"点",510,520);}
         fill(0);
     textSize(80);
     text("リトライ",750,750);
