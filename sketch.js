@@ -163,7 +163,7 @@ if(change==true&&home==false&&a==true){
         text("直近のハイスコア",500,300);
         textSize(50);
         text("・制限時間は60秒",450,250);
-        text("・命中率が高いとボーナス",450,200);
+        text("・命中率が高いとボーーーーーナス",450,200);
         textSize(150);
         text("もぐらたたき",0,120);
         textSize(100);
