@@ -122,9 +122,9 @@ if(change==true&&home==false&&a==true){
         special.x=random(cr);
         special.y=random(cri);
         spoint[1]+=1
-        sjudge=true;
-	FCF[1]=touch.x+50
-	FCF[2]=touch.y-50
+        for(let a=0;a<30;a++){
+	text("+3000000000000000000",touch.x,touch.y)
+	}
     }
     if(a==true&&((abs(rainbow.x-touch.x+50)<95&&abs(rainbow.y-touch.y-45)<110)||(abs(rainbow.x-touch.x)<75&&abs(rainbow.y-touch.y)<75))){
         point[N]+=5
